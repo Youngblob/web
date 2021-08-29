@@ -17,5 +17,3 @@ fetch("./includes/footer.html")
     document.querySelector("footer").innerHTML = data;
 });
 
-
-
