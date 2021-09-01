@@ -2335,6 +2335,10 @@ html {
   z-index: 20;
 }
 
+.z-50 {
+  z-index: 50;
+}
+
 .my-2 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
@@ -3615,10 +3619,6 @@ html {
 
   .md\:place-items-start {
     place-items: start;
-  }
-
-  .md\:justify-start {
-    justify-content: flex-start;
   }
 
   .md\:space-y-4 > :not([hidden]) ~ :not([hidden]) {
