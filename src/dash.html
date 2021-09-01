@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+
+<head>
+  <!-- ... -->
+  <title>InCryptix</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+
+  <link href="assets/css/main.css" rel="stylesheet">
+  <script src="assets/js/vendor/alpine.js"></script>
+  <script src="assets/js/main.js"></script>
+</head>
+
+<body class="bg-base-200" >
+
+  <div class="main min-h-screen ">
+
+    <header></header>
+    <div class="w-screen max-h-screen flex flex-col justify-start gap-4 pt-10">
+
+      <div class="card shadow-2xl w-10/12 md:w-96  text-primary-content bg-base-100 mx-32">
+        <div class="card-body items-center justify-center">
+          <div class="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-purple-50">
+            <svg class="w-8 h-8 text-purple-700" stroke="currentColor" viewBox="0 0 52 52">
+              <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+            </svg>
+          </div>
+          <h1 class=" font-bold text-lg text-purple-900 mb-2">Create Certificate</h1>
+          <p class="text-gray-700 text-sm">Deploy decentralized and verifiable certificate</p> 
+          <div class="justify-start card-actions">
+            <a href="#create-modal" class="btn btn-sm bg-purple-900">
+              Create
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-4 h-4 ml-1 stroke-current">  
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>                        
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div> 
+      
+      <div class="card shadow-2xl w-10/12 md:w-96  text-primary-content bg-base-100 mx-32">
+        <div class="card-body items-center justify-center">
+          <div class="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-green-50">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-green-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+            </svg>
+          </div>
+          <h1 class=" font-bold text-lg text-green-900 mb-2">Verify Certificate</h1>
+          <p class="text-gray-700 text-sm">Validate your certificate in one click</p> 
+          <div class="justify-start card-actions">
+            <a href="#create-modal" class="btn btn-sm bg-green-900">
+                Verify
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-4 h-4 ml-1 stroke-current">  
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>                        
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div> 
+      
+      
+    </div>
+    
+    
+    <div id="create-modal" class="modal">
+    <div class="modal-box">
+      <p>Enim dolorem dolorum omnis atque necessitatibus. Consequatur aut adipisci qui iusto illo eaque. Consequatur repudiandae et. Nulla ea quasi eligendi. Saepe velit autem minima.</p> 
+      <div class="modal-action">
+        <a href="#" class="btn btn-primary">Accept</a> 
+        <a href="#" class="btn">Close</a>
+      </div>
+    </div>
+  </div>
+  
+  <!-- <footer></footer> -->
+  <!-- <div class="my-5 md:my-32 rounded-2xl p-4 footer text-base-content footer-center align-bottom">
+    <div>
+      <p class="text-xs text-gray-600">Copyright © 2021 - All right reserved by InCryptix</p>
+    </div>
+  </div> -->
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.rings.min.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+
+<script>
+  VANTA.GLOBE({
+  // VANTA.RINGS({
+    el: ".main",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    scale: 1.00,
+    scaleMobile: 1.00,
+    color2: 0xbeb2ff,
+    color: 0xffffff,
+  backgroundColor: 0xe0725
+  })
+  </script>
+</body>
+
+</html>
