@@ -1,38 +1,39 @@
 
 let header = "./includes/header.html"
-if(["/dash","/dash.html","/src/dash.html"].includes(window.location.pathname)){
+if (["/dash", "/dash.html", "/src/dash.html"].includes(window.location.pathname)) {
   header = "./includes/header-dash.html"
 }
 
-console.log(header,window.location.pathname)
+console.log(header, window.location.pathname)
 fetch(header).then(response => {
-    return response.text()
-  })
+  return response.text()
+})
   .then(data => {
     // console.log(data)
     document.querySelector("header").innerHTML = data;
-});
+  });
 
 fetch("./includes/footer.html")
   .then(response => {
     return response.text()
   })
   .then(data => {
-    try{
+    try {
       document.querySelector("footer").innerHTML = data;
     }
-    catch(e){}
-});
+    catch (e) { }
+  });
 
 /* check url params */
 
-const USERS = ["IA","SD","RT"]
-$(document).ready(function(){
+const USERS = ["IA", "SD", "RT"]
+$(document).ready(function () {
   let url = new URL(window.location.href);
   let params = new URLSearchParams(url.search.slice(1));
   var hasUser = params.has("user")
   var user = params.get("user")
-  if(hasUser && USERS.includes(user)){
+  //console.log(user)
+  if (hasUser && USERS.includes(user)) {
     $("#login").addClass("hidden")
     if(user!='IA'){
       $("#create-card").remove();
@@ -46,11 +47,11 @@ $(document).ready(function(){
 /* Alpine JS - State control */
 
 const STATUS = {
-  idle:"0",
-  loading:"1",
-  error:"2"
+  idle: "0",
+  loading: "1",
+  error: "2"
 }
-function getData(){
+function getData() {
   return {
       student_name:"",
       cert_auth:"IIT New Delhi",
@@ -81,30 +82,31 @@ function getData(){
             "degree":this.degree,
           }
         }
-        const rawResponse  = await fetch(api,{
-          // mode:"no-cors",
-          headers:{
-            'Accept': 'application/json',
-            "Content-Type":"application/json"
-          },
-          method:"POST",
-          body: JSON.stringify(data)
-        })
-        const result = await rawResponse.text();
-        let resultJson = ""
-        try{
-          resultJson = JSON.parse(result)
-          this.program_id = resultJson.result
-          this.create_status = STATUS.idle
-          if(resultJson.status == 200){
-            $('#create-modal form')[0].reset()
-            $('#create-modal').removeClass("modal-open")
-            $('#show-modal').toggleClass('modal-open')
-          }
-        }
-        catch(e){}
-
+      }
+      const rawResponse = await fetch(api, {
+        // mode:"no-cors",
+        headers: {
+          'Accept': 'application/json',
+          "Content-Type": "application/json"
+        },
+        method: "POST",
+        body: JSON.stringify(data)
+      })
+      const result = await rawResponse.text();
+      let resultJson = ""
+      try {
+        resultJson = JSON.parse(result)
+        this.program_id = resultJson.result
         this.create_status = STATUS.idle
+        if (resultJson.status == 200) {
+          $('#create-modal form')[0].reset()
+          $('#create-modal').removeClass("modal-open")
+          $('#show-modal').toggleClass('modal-open')
+        }
+      }
+      catch (e) { }
+
+      this.create_status = STATUS.idle
 
         // this.data
         
