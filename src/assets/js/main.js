@@ -50,8 +50,11 @@ const STATUS = {
 }
 function getData(){
   return {
+
       student_name:"",
       cert_auth:"",
+      degree:"",
+      enroll_no:"",
       program_id:"",
       verify_stud_name:"",
       verify_cert_auth:"",
@@ -62,7 +65,11 @@ function getData(){
         let api = "https://solana-deploy.parmu.town/registerCertificate"
         const data = {
           "student-name":this.student_name,
-          "certifying-authority":this.cert_auth
+          "certifying-authority":this.cert_auth,
+          "extras":{
+            "enroll_no":this.enroll_no,
+            "degree":this.degree,
+          }
         }
         const rawResponse  = await fetch(api,{
           // mode:"no-cors",

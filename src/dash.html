@@ -173,7 +173,7 @@ Advantages:
               </label>
               <input type="text" x-model="student_name" placeholder="eg:Akshay" class="input input-bordered input-md"
               required maxlength="30" minlength="3">
-          </div>
+            </div>
           <div class="form-control ">
             <label class="label">
               <span class="label-text">Certifying authority</span>
@@ -183,13 +183,35 @@ Advantages:
               <option>Amity University, Uttar Pradesh</option> 
               <option>KIIT, Bhubaneswar</option> 
               <option>Stanford University, California</option> 
-              <option>Udemy - Online Platform</option> 
-              <option>Khan Academy - Online Platform</option> 
+              <option>Upgrad - Online Platform</option> 
               <option>Coursera - Online Platform</option> 
-              
             </select>            
             <!-- <input type="text"  placeholder="eg:IIT Delhi" class="input input-bordered" required
               maxlength="50" minlength="3"> -->
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div class="form-control ">
+              <label class="label">
+                <span class="label-text">Enrollment No.</span>
+              </label>
+              <input x-modal="enroll_no" type="text" x-model="student_name" placeholder="eg:A2305215226" class="input input-bordered input-md"
+              required maxlength="30" minlength="3">
+            </div>
+            <div class="form-control ">
+              <label class="label">
+                <span class="label-text">Degree</span>
+              </label>
+              <select class="select select-bordered w-52" x-modal="degree" >
+                <option>B.Tech</option> 
+                <option>B.Sc</option>
+                <option>B.A</option> 
+                <option>M.Sc</option> 
+                <option>MBA</option> 
+                <option>M.Tech</option> 
+                
+              </select>
             </div>
           </div>
 
