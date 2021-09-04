@@ -23,134 +23,135 @@
 
     <div class="flex justify-between">
 
-    
-    <!-- main section cards -->
-    <div class="z-20 w-screen max-h-screen inline-flex  flex-col place-items-center md:place-items-start  gap-4 pt-10">
 
-      <div class="card shadow-2xl w-10/12 md:w-96  text-primary-content bg-base-100 md:mx-32">
-        <div class="card-body items-center justify-center">
-          <div class="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-purple-50">
-            <svg class="w-8 h-8 text-purple-700" stroke="currentColor" viewBox="0 0 52 52">
-              <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
-                points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
-            </svg>
-          </div>
-          <h1 class=" font-bold text-lg text-purple-900 mb-2">Issue Certificate</h1>
-          <p class="text-gray-700 text-sm">Deploy decentralized and verifiable certificate</p>
-          <div class="justify-start card-actions">
-            <button href="#create-modal" @click="toggleCreateModal" class="btn btn-sm bg-purple-900">
-              Create
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                class="inline-block w-4 h-4 ml-1 stroke-current">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+      <!-- main section cards -->
+      <div
+        class="z-20 w-screen max-h-screen inline-flex  flex-col place-items-center md:place-items-start  gap-4 pt-10">
+
+        <div class="card shadow-2xl w-10/12 md:w-96  text-primary-content bg-base-100 md:mx-32">
+          <div class="card-body items-center justify-center">
+            <div class="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-purple-50">
+              <svg class="w-8 h-8 text-purple-700" stroke="currentColor" viewBox="0 0 52 52">
+                <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                  points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
               </svg>
-            </button>
+            </div>
+            <h1 class=" font-bold text-lg text-purple-900 mb-2">Issue Certificate</h1>
+            <p class="text-gray-700 text-sm">Deploy decentralized and verifiable certificate</p>
+            <div class="justify-start card-actions">
+              <button href="#create-modal" @click="toggleCreateModal" class="btn btn-sm bg-purple-900">
+                Create
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                  class="inline-block w-4 h-4 ml-1 stroke-current">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="card shadow-2xl w-10/12 md:w-96  text-primary-content bg-base-100 md:mx-32">
-        <div class="card-body items-center justify-center">
-          <div class="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-green-50">
+        <div class="card shadow-2xl w-10/12 md:w-96  text-primary-content bg-base-100 md:mx-32">
+          <div class="card-body items-center justify-center">
+            <div class="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-green-50">
 
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-green-700" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-            </svg>
-          </div>
-          <h1 class=" font-bold text-lg text-green-900 mb-2">Explore Certificate</h1>
-          <p class="text-gray-700 text-sm">Validate your certificate in one click</p>
-          <div class="justify-start card-actions">
-            <button @click="toggleVerifyModal" href="#create-modal" class="btn btn-sm bg-green-900">
-              Explore
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                class="inline-block w-4 h-4 ml-1 stroke-current">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-green-700" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
               </svg>
-            </button>
+            </div>
+            <h1 class=" font-bold text-lg text-green-900 mb-2">Explore Certificate</h1>
+            <p class="text-gray-700 text-sm">Validate your certificate in one click</p>
+            <div class="justify-start card-actions">
+              <button @click="toggleVerifyModal" href="#create-modal" class="btn btn-sm bg-green-900">
+                Explore
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                  class="inline-block w-4 h-4 ml-1 stroke-current">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
+
+
       </div>
 
+      <div class="w-full bg-white border-2  shadow-sm flex flex-col p-10 place-items-center mt-10 mr-10 rounded-xl">
+        <div id="IA" class="hidden">
+          <div class="flex flex-col place-items-center">
 
-    </div>
+            <h1 class="text-lg text-center font-bold mb-2">Welcome to the certifying authority portal!</h1>
 
-    <div class="w-full bg-white border-2  shadow-sm flex flex-col p-10 place-items-center mt-10 mr-10 rounded-xl">
-      <div id="IA" class="hidden">
-        <div class="flex flex-col place-items-center">
+            <p class="text-gray-700 text-sm">
+              This portal allows you to issue and verify your learner's certificates on a decentralized blockchain.
+            </p><br>
 
-          <h1 class="text-lg text-center">Welcome to the certifying authority portal
-            This portal allows you to issue and verify your learner's certificates on a decentralized blockchain.
-          </h1>
-          <div class="mt-4 flex flex-col gap-2">
-            
-            <div tabindex="0" class="collapse w-96 border rounded-box border-base-300 collapse-arrow"> 
-              <div class="collapse-title text-xl font-medium">
-                I open with focus
-              </div> 
-              <div class="collapse-content"> 
-                <p>Collapse content reveals with focus. If you add a checkbox, you can control it using checkbox instead of focus. Or you can force-open/force-close using 
-                  <span class="badge badge-outline">collapse-open</span> and 
-                  <span class="badge badge-outline">collapse-close</span> classes.
-                </p>
+            <div class="mt-4 flex flex-col gap-2">
+
+              <div tabindex="0" class="collapse w-96 border rounded-box border-base-300 collapse-arrow">
+                <div class="collapse-title text-xl font-medium">
+                  About
+                </div>
+                <div class="collapse-content">
+                  <p>A certificate is deployed on the Solana blockchain as an open, publicly verifiable program. This
+                    non fungible certificate acts as an automated process of evaluation and verification of the
+                    certificate.
+
+                    <br><br>Advantages:<br>
+                    - The certificates are trustlessly verifiable<br>
+                    - The certificates are immutable<br>
+                    - With a decentralized network your certificates are available with 100% up-time<br>
+                    - The issuance of certificates can be fully automated by using a smart contract<br>
+                  </p>
+                </div>
               </div>
-            </div> 
-            <div tabindex="0" class="collapse w-96 border rounded-box border-base-300 collapse-arrow"> 
-              <div class="collapse-title text-xl font-medium">
-                I open with focus
-              </div> 
-              <div class="collapse-content"> 
-                <p>Collapse content reveals with focus. If you add a checkbox, you can control it using checkbox instead of focus. Or you can force-open/force-close using 
-                  <span class="badge badge-outline">collapse-open</span> and 
-                  <span class="badge badge-outline">collapse-close</span> classes.
-                </p>
-              </div>
-            </div> 
-            <div tabindex="0" class="collapse w-96 border rounded-box border-base-300 collapse-arrow"> 
-              <div class="collapse-title text-xl font-medium">
-                I open with focus
-              </div> 
-              <div class="collapse-content"> 
-                <p>Collapse content reveals with focus. If you add a checkbox, you can control it using checkbox instead of focus. Or you can force-open/force-close using 
-                  <span class="badge badge-outline">collapse-open</span> and 
-                  <span class="badge badge-outline">collapse-close</span> classes.
-                </p>
+              <div tabindex="0" class="collapse w-96 border rounded-box border-base-300 collapse-arrow">
+                <div class="collapse-title text-xl font-medium">
+                  How does it work?
+                </div>
+                <div class="collapse-content">
+                  <p>CA certificate is deployed on the Solana blockchain as an open, publicly verifiable program. This
+                    non fungible certificate acts as an automated process for evaluation and verification of the
+                    certificate.
+                  </p>
+                </div>
               </div>
             </div>
-    
           </div>
-          </div>
-      </div>
-      <div id="SD" class="hidden">
-        <h1 class="text-lg text-center">
-          Welcome to the student portal:
-This portal allows you to view your current marks and track your progress towards your course!
-        </h1>
-        <p class="mt-2">
-          As you continue your learning journey, your progress will be recorded on your non fungible certificate's storage on the Solana blockchain. 
+        </div>
+        <div id="SD" class="hidden">
+          <h1 class="text-lg text-center">
+            Welcome to the student portal:
+            This portal allows you to view your current marks and track your progress towards your course!
+          </h1>
+          <p class="mt-2">
+            As you continue your learning journey, your progress will be recorded on your non fungible certificate's
+            storage on the Solana blockchain.
 
-          Advantages:
-              - The certificates are immutable.
-              - With a decentralized network your certificates are available with 100% up-time.
-        </p>
-      </div>
-      <div id="RT" class="hidden">
-        <h1 class="text-lg text-center">
-          welcome recruiter!
-          do you want to verify whether you candidate owns the certificate. Request them for their certificate_id and view it right here!  
-        </h1>
-        <p class="mt-2">
-          Certificate verification is as easy as entering a certificate ID and a digital signature to validate and prove ownership of the certification.
+            Advantages:
+            - The certificates are immutable.
+            - With a decentralized network your certificates are available with 100% up-time.
+          </p>
+        </div>
+        <div id="RT" class="hidden">
+          <h1 class="text-lg text-center">
+            welcome recruiter!
+            do you want to verify whether you candidate owns the certificate. Request them for their certificate_id and
+            view it right here!
+          </h1>
+          <p class="mt-2">
+            Certificate verification is as easy as entering a certificate ID and a digital signature to validate and
+            prove ownership of the certification.
 
-Advantages:
-    - The certificates are trustlessly verifiable.
-    - The certificates are immutable.
-        </p>
+            Advantages:
+            - The certificates are trustlessly verifiable.
+            - The certificates are immutable.
+          </p>
+        </div>
       </div>
+      <!-- /end main section cards -->
     </div>
-    <!-- /end main section cards -->
-  </div>
     <!-- create modal starts here -->
     <div id="create-modal" class="modal modal-open1 ">
 
@@ -172,21 +173,21 @@ Advantages:
                 <span class="label-text">Student name</span>
               </label>
               <input type="text" x-model="student_name" placeholder="eg:Akshay" class="input input-bordered input-md"
-              required maxlength="30" minlength="3">
+                required maxlength="30" minlength="3">
             </div>
-          <div class="form-control ">
-            <label class="label">
-              <span class="label-text">Certifying authority</span>
-            </label>
-            <select class="select select-bordered w-full max-w-xs" x-model="cert_auth">
-              <option>IIT New Delhi</option> 
-              <option>Amity University, Uttar Pradesh</option> 
-              <option>KIIT, Bhubaneswar</option> 
-              <option>Stanford University, California</option> 
-              <option>Upgrad - Online Platform</option> 
-              <option>Coursera - Online Platform</option> 
-            </select>            
-            <!-- <input type="text"  placeholder="eg:IIT Delhi" class="input input-bordered" required
+            <div class="form-control ">
+              <label class="label">
+                <span class="label-text">Certifying authority</span>
+              </label>
+              <select class="select select-bordered w-full max-w-xs" x-model="cert_auth">
+                <option>IIT New Delhi</option>
+                <option>Amity University, Uttar Pradesh</option>
+                <option>KIIT, Bhubaneswar</option>
+                <option>Stanford University, California</option>
+                <option>Upgrad - Online Platform</option>
+                <option>Coursera - Online Platform</option>
+              </select>
+              <!-- <input type="text"  placeholder="eg:IIT Delhi" class="input input-bordered" required
               maxlength="50" minlength="3"> -->
             </div>
           </div>
@@ -196,21 +197,21 @@ Advantages:
               <label class="label">
                 <span class="label-text">Enrollment No.</span>
               </label>
-              <input x-modal="enroll_no" type="text" x-model="student_name" placeholder="eg:A2305215226" class="input input-bordered input-md"
-              required maxlength="30" minlength="3">
+              <input x-modal="enroll_no" type="text" x-model="student_name" placeholder="eg:A2305215226"
+                class="input input-bordered input-md" required maxlength="30" minlength="3">
             </div>
             <div class="form-control ">
               <label class="label">
                 <span class="label-text">Degree</span>
               </label>
-              <select class="select select-bordered w-52" x-modal="degree" >
-                <option>B.Tech</option> 
+              <select class="select select-bordered w-52" x-modal="degree">
+                <option>B.Tech</option>
                 <option>B.Sc</option>
-                <option>B.A</option> 
-                <option>M.Sc</option> 
-                <option>MBA</option> 
-                <option>M.Tech</option> 
-                
+                <option>B.A</option>
+                <option>M.Sc</option>
+                <option>MBA</option>
+                <option>M.Tech</option>
+
               </select>
             </div>
           </div>
@@ -290,21 +291,22 @@ Advantages:
         <div class="flex flex-col place-items-center">
           <div class="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-green-50">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-green-700" fill="none" viewBox="0 0 24 24"
-            stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-          </svg>
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+            </svg>
           </div>
           <h1 class=" text-lg font-bold text-green-800 ">Certificate Explorer</h1>
           <!-- <p class="text-sm px-8 mt-2 text-center">Copy your unique certificate id & keep it safe for future reference
             and verification.</p> -->
 
-          <form class=" my-4 " action="" @submit.prevent="" >
+          <form class=" my-4 " action="" @submit.prevent="">
             <div class="form-control flex flex-row items-center gap-2">
               <!-- <label class="label">
                 <span class="label-text">Certificate ID</span>
               </label>  -->
-              <input type="text" placeholder="Paste 44 characters long ID" x-modal="verify_cert_id" class="input input-bordered" maxlength="44">
+              <input type="text" placeholder="Paste 44 characters long ID" x-modal="verify_cert_id"
+                class="input input-bordered" maxlength="44">
               <button type="submit" class="btn ">Find</button>
 
 
@@ -313,22 +315,28 @@ Advantages:
 
           <div class="alert">
             <div class="flex-1">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mx-2 text-green-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mx-2 text-green-700" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
               <label>
                 <!-- <strong>Verified!</strong> -->
 
-                Registered by <span class="font-bold" x-text="verify_stud_name">Akshay</span> & <span class="font-bold" x-text="verify_cert_auth">Amity</span> as Certifying authority
+                Registered by <span class="font-bold" x-text="verify_stud_name">Akshay</span> & <span class="font-bold"
+                  x-text="verify_cert_auth">Amity</span> as Certifying authority
               </label>
-            </div> 
+            </div>
             <div class="flex-none">
               <button class="btn btn-sm btn-ghost">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-4 mr-2 stroke-current">     
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>                     
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                  class="inline-block w-4 mr-2 stroke-current">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9">
+                  </path>
                 </svg>
-                    Open In Explorer
-                  
+                Open In Explorer
+
               </button>
             </div>
           </div>
@@ -348,39 +356,48 @@ Advantages:
 
         <div class="flex gap-5 my-8">
 
-          <div @click="openDash('IA')" class="hover:scale-105 hover:bg-gray-50 cursor-pointer  flex flex-col place-items-center bg-white p-4 rounded-lg gap-5 w-56">
+          <div @click="openDash('IA')"
+            class="hover:scale-105 hover:bg-gray-50 cursor-pointer  flex flex-col place-items-center bg-white p-4 rounded-lg gap-5 w-56">
             <div class="inline-flex items-center justify-center w-16 h-16 p-4 bg-purple-50 rounded-full">
-  
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-purple-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" />
+
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-purple-800" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" />
               </svg>
             </div>
-            <h2 class=" uppercase cursor-pointer">Issuing authority</h2> 
+            <h2 class=" uppercase cursor-pointer">Issuing authority</h2>
           </div>
-          <div @click="openDash('SD')" class="hover:scale-105 hover:bg-gray-50 cursor-pointer  flex flex-col place-items-center bg-white p-4 rounded-lg gap-5 w-56">
+          <div @click="openDash('SD')"
+            class="hover:scale-105 hover:bg-gray-50 cursor-pointer  flex flex-col place-items-center bg-white p-4 rounded-lg gap-5 w-56">
             <div class="inline-flex items-center justify-center w-16 h-16 p-4 bg-green-50 rounded-full">
-  
-              
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-green-800"fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+
+
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-green-800" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
               </svg>
             </div>
-            <h2 class=" uppercase cursor-pointer">Student</h2> 
+            <h2 class=" uppercase cursor-pointer">Student</h2>
           </div>
-          <div @click="openDash('RT')" class="hover:scale-105 hover:bg-gray-50 cursor-pointer  flex flex-col place-items-center bg-white p-4 rounded-lg gap-5 w-56">
+          <div @click="openDash('RT')"
+            class="hover:scale-105 hover:bg-gray-50 cursor-pointer  flex flex-col place-items-center bg-white p-4 rounded-lg gap-5 w-56">
             <div class="inline-flex items-center justify-center w-16 h-16 p-4 bg-blue-50 rounded-full">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-blue-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-blue-800" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
-              
+
             </div>
-            <h2 class=" uppercase cursor-pointer">Recruiter</h2> 
+            <h2 class=" uppercase cursor-pointer">Recruiter</h2>
           </div>
-              
+
         </div>
-         
+
       </div>
-      
+
     </div>
 
 
