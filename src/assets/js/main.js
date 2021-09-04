@@ -20,7 +20,6 @@ fetch("./includes/footer.html")
   .then(data => {
     try{
       document.querySelector("footer").innerHTML = data;
-
     }
     catch(e){}
 });
@@ -35,6 +34,9 @@ $(document).ready(function(){
   var user = params.get("user")
   if(hasUser && USERS.includes(user)){
     $("#login").addClass("hidden")
+    if(user!='IA'){
+      $("#create-card").remove();
+    }
     window.user = user
     $(`#${user}`).toggleClass("hidden")
   }
@@ -50,15 +52,23 @@ const STATUS = {
 }
 function getData(){
   return {
-
       student_name:"",
-      cert_auth:"",
-      degree:"",
+      cert_auth:"IIT New Delhi",
+      degree:"B.Tech",
       enroll_no:"",
       program_id:"",
       verify_stud_name:"",
       verify_cert_auth:"",
+      verify_cert_id:"",
       create_status:STATUS.idle,
+      verify_status:STATUS.idle,
+      
+        details_pid:"abc",
+        details_stud_name:"aaa",
+        details_degree:"As",
+        details_ca:"as",
+        details_enroll_no:"asdr",
+      
       async createCert() {
         console.log("ic.create called")
         this.create_status = STATUS.loading
@@ -99,7 +109,28 @@ function getData(){
         // this.data
         
       },
-      
+      async verifyCert(){
+        const pid = $('#verify_cert_id').val()
+        this.verify_status = STATUS.loading
+        const api = "https://proxy.incryptix.workers.dev/v1/verify/"+pid
+        const rawResponse = await fetch(api)
+        const result = await rawResponse.json()
+        this.verify_status = STATUS.idle
+        $('#verify-form')[0].reset()
+        // set data
+
+        this.details_ca = result.certifyingAutority
+        this.details_degree = result.extras.degree
+        this.details_enroll_no = result.extras.enroll_no
+        this.details_stud_name = result.studentName
+        this.details_pid = pid
+        // toggle modals
+        this.toggleVerifyModal()
+        this.toggleDetailsModal()
+
+        // console.log(result)
+
+      },
       copyId() {
         var type = "text/plain";
         var blob = new Blob([this.program_id], { type });
@@ -127,6 +158,10 @@ function getData(){
       get explorerUrl(){
         return `https://explorer.solana.com/address/${this.program_id}?cluster=devnet`;
       },
+      get verifyExplorerUrl(){
+        return `https://explorer.solana.com/address/${this.details_pid}?cluster=devnet`;
+
+      },
       toggleCreateModal(){
         $('#create-modal').toggleClass("modal-open")
       },
@@ -135,6 +170,9 @@ function getData(){
       },
       toggleVerifyModal(){
         $('#verify-modal').toggleClass("modal-open")
+      },
+      toggleDetailsModal(){
+        $('#details-modal').toggleClass("modal-open")
       },
       openDash(page){
         window.location = "?user="+page
