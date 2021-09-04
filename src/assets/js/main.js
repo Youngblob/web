@@ -25,6 +25,22 @@ fetch("./includes/footer.html")
     catch(e){}
 });
 
+/* check url params */
+
+const USERS = ["IA","SD","RT"]
+$(document).ready(function(){
+  let url = new URL(window.location.href);
+  let params = new URLSearchParams(url.search.slice(1));
+  var hasUser = params.has("user")
+  var user = params.get("user")
+  if(hasUser && USERS.includes(user)){
+    $("#login").addClass("hidden")
+    window.user = user
+    $(`#${user}`).toggleClass("hidden")
+  }
+})
+
+
 /* Alpine JS - State control */
 
 const STATUS = {
@@ -37,6 +53,8 @@ function getData(){
       student_name:"",
       cert_auth:"",
       program_id:"",
+      verify_stud_name:"",
+      verify_cert_auth:"",
       create_status:STATUS.idle,
       async createCert() {
         console.log("ic.create called")
@@ -110,6 +128,9 @@ function getData(){
       },
       toggleVerifyModal(){
         $('#verify-modal').toggleClass("modal-open")
+      },
+      openDash(page){
+        window.location = "?user="+page
       }
 
   }

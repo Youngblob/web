@@ -6,3 +6,12 @@
 
 4. Running live server using python 
     - command: python3 -m http.server
+
+
+1. stud name
+2. enroll no
+3. course enrolled in (checkbox)
+4. passScore
+5. totalscore
+6. date
+
