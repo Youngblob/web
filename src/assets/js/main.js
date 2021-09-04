@@ -64,11 +64,11 @@ function getData() {
       create_status:STATUS.idle,
       verify_status:STATUS.idle,
       
-        details_pid:"abc",
-        details_stud_name:"aaa",
-        details_degree:"As",
-        details_ca:"as",
-        details_enroll_no:"asdr",
+      details_pid:"abc",
+      details_stud_name:"aaa",
+      details_degree:"As",
+      details_ca:"as",
+      details_enroll_no:"asdr",
       
       async createCert() {
         console.log("ic.create called")
@@ -82,7 +82,6 @@ function getData() {
             "degree":this.degree,
           }
         }
-      }
       const rawResponse = await fetch(api, {
         // mode:"no-cors",
         headers: {
