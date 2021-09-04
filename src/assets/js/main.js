@@ -36,7 +36,7 @@ $(document).ready(function () {
   if (hasUser && USERS.includes(user)) {
     $("#login").addClass("hidden")
     if(user!='IA'){
-      $("#create-card").remove();
+      $("#create-card").toggleClass("hidden");
     }
     window.user = user
     $(`#${user}`).toggleClass("hidden")

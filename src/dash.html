@@ -21,14 +21,14 @@
 
     <header></header>
 
-    <div class="flex justify-between">
+    <div class="flex flex-col md:flex-row justify-between">
 
 
       <!-- main section cards -->
       <div
         class="z-20 w-screen max-h-screen inline-flex  flex-col place-items-center md:place-items-start  gap-4 pt-10">
 
-        <div id="create-card" class="card shadow-2xl w-10/12 md:w-96  text-primary-content bg-base-100 md:mx-32" >
+        <div id="create-card" class="card shadow-2xl w-10/12 md:w-96  text-primary-content bg-base-100 md:mx-32">
           <div class="card-body items-center justify-center">
             <div class="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-purple-50">
               <svg class="w-8 h-8 text-purple-700" stroke="currentColor" viewBox="0 0 52 52">
@@ -77,13 +77,16 @@
 
       </div>
 
-      <div class="w-full bg-white border-2  shadow-sm flex flex-col p-10 place-items-center mt-10 mr-10 rounded-xl">
+      <!-- Description -->
+      <div
+        class=" w-full bg-white border-2  shadow-sm hidden md:flex flex-col p-10 place-items-center mt-10 mr-10 rounded-xl">
+        <img src="assets/images/hello.jpg" class="w-32" alt="">
         <div id="IA" class="hidden">
           <div class="flex flex-col place-items-center">
 
             <h1 class="text-lg text-center font-bold mb-2">Welcome Certifying Authority!</h1>
 
-            <p class="text-gray-700 text-sm mt-2">
+            <p class="text-gray-700 text-sm mt-2 text-center">
               This portal allows you to issue and verify your learner's certificates on a decentralized blockchain.
             </p><br>
 
@@ -127,7 +130,7 @@
               Welcome Learner!
 
             </h1>
-            <p class="text-gray-700 text-sm mt-2">
+            <p class="text-gray-700 text-sm mt-2 text-center">
               This portal allows you to view your current marks and track your progress towards your course!
             </p><br>
 
@@ -169,7 +172,7 @@
               Welcome Recruiter!
 
             </h1>
-            <p class="text-gray-700 text-sm mt-2">
+            <p class="text-gray-700 text-sm mt-2 text-center">
               Do you want to verify whether you candidate owns the certificate. Request them for their certificate_id
               and view it right here!
             </p><br>
@@ -211,6 +214,7 @@
     </div>
     <!-- /end main section cards -->
   </div>
+  <!-- end main here -->
   <!-- create modal starts here -->
   <div id="create-modal" class="modal modal-open1 ">
 
@@ -227,69 +231,53 @@
 
         <div class="flex gap-4">
 
-            <div class="form-control ">
-              <label class="label">
-                <span class="label-text">Student name</span>
-              </label>
-              <input type="text" x-model="student_name" placeholder="eg:Akshay" class="input input-bordered input-md"
-                required maxlength="30" minlength="3">
-            </div>
-            <div class="form-control ">
-              <label class="label">
-                <span class="label-text">Certifying authority</span>
-              </label>
-              <select class="select select-bordered w-full max-w-xs" x-model="cert_auth">
-                <option value="IIT New Delhi" selected>IIT New Delhi</option>
-                <option value="Amity University, Uttar Pradesh">Amity University, Uttar Pradesh</option>
-                <option value="KIIT, Bhubaneswar">KIIT, Bhubaneswar</option>
-                <option value="Stanford University, California">Stanford University, California</option>
-                <option value="Upgrad - Online Platform">Upgrad - Online Platform</option>
-                <option value="Coursera - Online Platform">Coursera - Online Platform</option>
-              </select>
-              <!-- <input type="text"  placeholder="eg:IIT Delhi" class="input input-bordered" required
-              maxlength="50" minlength="3"> -->
+          <div class="form-control ">
+            <label class="label">
+              <span class="label-text">Student name</span>
+            </label>
+            <input type="text" x-model="student_name" placeholder="eg:Akshay" class="input input-bordered input-md"
+              required maxlength="30" minlength="3">
+          </div>
+          <div class="form-control ">
+            <label class="label">
+              <span class="label-text">Certifying authority</span>
+            </label>
+            <select class="select select-bordered w-full max-w-xs" x-model="cert_auth">
+              <option value="IIT New Delhi" selected>IIT New Delhi</option>
+              <option value="Amity University, Uttar Pradesh">Amity University, Uttar Pradesh</option>
+              <option value="KIIT, Bhubaneswar">KIIT, Bhubaneswar</option>
+              <option value="Stanford University, California">Stanford University, California</option>
+              <option value="Upgrad - Online Platform">Upgrad - Online Platform</option>
+              <option value="Coursera - Online Platform">Coursera - Online Platform</option>
+            </select>
           </div>
         </div>
 
-          <div class="flex gap-4">
-            <div class="form-control ">
-              <label class="label">
-                <span class="label-text">Enrollment No.</span>
-              </label>
-              <input x-modal="enroll_no" type="text" x-model="enroll_no" placeholder="eg:A2305215226"
-                class="input input-bordered input-md" required maxlength="30" minlength="3">
-            </div>
-            <div class="form-control ">
-              <label class="label">
-                <span class="label-text">Degree</span>
-              </label>
-              <select class="select select-bordered w-52" x-model="degree">
-                <option value="B.Tech" selected>B.Tech</option>
-                <option value="B.Sc">B.Sc</option>
-                <option value="B.A">B.A</option>
-                <option value="M.Sc">M.Sc</option>
-                <option value="MBA">MBA</option>
-                <option value="M.Tech">M.Tech</option>
-
-              </select>
-
-            </div>
+        <div class="flex gap-4">
+          <div class="form-control ">
+            <label class="label">
+              <span class="label-text">Enrollment No.</span>
+            </label>
+            <input x-modal="enroll_no" type="text" x-model="enroll_no" placeholder="eg:A2305215226"
+              class="input input-bordered input-md" required maxlength="30" minlength="3">
           </div>
           <div class="form-control ">
             <label class="label">
               <span class="label-text">Degree</span>
             </label>
-            <select class="select select-bordered w-52" x-modal="degree">
-              <option>B.Tech</option>
-              <option>B.Sc</option>
-              <option>B.A</option>
-              <option>M.Sc</option>
-              <option>MBA</option>
-              <option>M.Tech</option>
+            <select class="select select-bordered w-52" x-model="degree">
+              <option value="B.Tech" selected>B.Tech</option>
+              <option value="B.Sc">B.Sc</option>
+              <option value="B.A">B.A</option>
+              <option value="M.Sc">M.Sc</option>
+              <option value="MBA">MBA</option>
+              <option value="M.Tech">M.Tech</option>
 
             </select>
+
           </div>
         </div>
+
 
         <div class="inline-flex gap-2 mt-5">
           <a href="" @click="toggleCreateModal" class="btn btn-sm btn-outline">
@@ -305,7 +293,9 @@
         </div>
       </form>
     </div>
+
   </div>
+  <!-- </div> -->
 
   <!-- Show modal starts here -->
   <div id="show-modal" class="modal ">
@@ -335,29 +325,28 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
             </svg>
-          </div>
-          <h1 class=" text-lg font-bold text-green-800 ">Transaction Successful</h1>
-          <p class="text-sm px-8 mt-2 text-center">Copy your unique certificate id & keep it safe for future reference
-            and verification.</p>
-          <!-- <input type="text" readonly class="input" value="6dRC5VbW714ump9kZWfSba7RYYGXjxGNJSsYCmGJbidb"> -->
-          <div class="my-4 text-sm text-gray-700 p-4 border-2 rounded-box" x-text="program_id"></div>
-          <div class="inline-flex gap-2 mt-5">
-            <button class="btn btn-sm btn-outline" @click="copyId()">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-              </svg>
-              Copy ID
-            </button>
-            <a :href="explorerUrl" target="__blank" class="btn btn-sm bg-purple-900"
-              >
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg>
-              Open Explorer
+        </div>
+        <h1 class=" text-lg font-bold text-green-800 ">Transaction Successful</h1>
+        <p class="text-sm px-8 mt-2 text-center">Copy your unique certificate id & keep it safe for future reference
+          and verification.</p>
+        <!-- <input type="text" readonly class="input" value="6dRC5VbW714ump9kZWfSba7RYYGXjxGNJSsYCmGJbidb"> -->
+        <div class="my-4 text-sm text-gray-700 p-4 border-2 rounded-box" x-text="program_id"></div>
+        <div class="inline-flex gap-2 mt-5">
+          <button class="btn btn-sm btn-outline" @click="copyId()">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+            </svg>
+            Copy ID
+          </button>
+          <a :href="explorerUrl" target="__blank" class="btn btn-sm bg-purple-900">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+            Open Explorer
 
           </a>
 
@@ -365,188 +354,165 @@
         </div>
       </div>
     </div>
-    <!-- Explore/verify Cert Details modal starts here -->
-    <div id="details-modal" class="modal modal">
+  </div>
 
-      <div class="modal-box px-10">
-        <svg @click="toggleDetailsModal()" xmlns="http://www.w3.org/2000/svg"
-          class="h-6 w-6 opacity-70 self-end absolute right-4 top-4" fill="none" viewBox="0 0 24 24"
-          stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-        <div class="flex flex-col place-items-center ">
-          <div class="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-green-50">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-800" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-            </svg>
-          </div>
-          <h1 class=" text-lg font-bold text-green-800 " x-text="details_pid"></h1>
-          <!-- <p class="text-sm px-8 mt-2 text-center">Following information is stored in the ce</p> -->
-          <!-- <input type="text" readonly class="input" value="6dRC5VbW714ump9kZWfSba7RYYGXjxGNJSsYCmGJbidb"> -->
-          <div class="inline-flex flex-col">
-            <div class="flex gap-4">
+  <!-- Explore/verify Cert Details modal starts here -->
+  <div id="details-modal" class="modal modal">
 
-              <div class="form-control">
-                <label class="label">
-                  <span class="label-text">Student Name</span>
-                </label>
-                <input type="text" placeholder="" x-model="details_stud_name" class="input input-bordered" readonly>
-              </div>
+    <div class="modal-box px-10">
+      <svg @click="toggleDetailsModal()" xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6 opacity-70 self-end absolute right-4 top-4" fill="none" viewBox="0 0 24 24"
+        stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+      <div class="flex flex-col place-items-center ">
+        <div class="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-green-50">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-800" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+        </div>
+        <h1 class=" text-lg font-bold text-green-800 " x-text="details_pid"></h1>
+        <!-- <p class="text-sm px-8 mt-2 text-center">Following information is stored in the ce</p> -->
+        <!-- <input type="text" readonly class="input" value="6dRC5VbW714ump9kZWfSba7RYYGXjxGNJSsYCmGJbidb"> -->
+        <div class="inline-flex flex-col">
+          <div class="flex gap-4">
 
-              <div class="form-control">
-                <label class="label">
-                  <span class="label-text">Certifying authority</span>
-                </label>
-                <input type="text" placeholder="" x-model="details_ca" class="input input-bordered" readonly>
-              </div>
-
-
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">Student Name</span>
+              </label>
+              <input type="text" placeholder="" x-model="details_stud_name" class="input input-bordered" readonly>
             </div>
-            <div class="flex gap-4">
 
-              <div class="form-control">
-                <label class="label">
-                  <span class="label-text">Enrollment Number</span>
-                </label>
-                <input type="text" placeholder="" x-model="details_enroll_no" class="input input-bordered" readonly>
-              </div>
-
-
-              <div class="form-control">
-                <label class="label">
-                  <span class="label-text">Degree</span>
-                </label>
-                <input type="text" placeholder="" x-model="details_degree" class="input input-bordered" readonly>
-              </div>
-
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">Certifying authority</span>
+              </label>
+              <input type="text" placeholder="" x-model="details_ca" class="input input-bordered" readonly>
             </div>
+
+
           </div>
+          <div class="flex gap-4">
 
-          <div class="inline-flex gap-2 mt-10">
-            
-            <a :href="verifyExplorerUrl" target="__blank" class="btn btn-sm bg-purple-900"
-              >
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg>
-              Open Explorer
-            </a>
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">Enrollment Number</span>
+              </label>
+              <input type="text" placeholder="" x-model="details_enroll_no" class="input input-bordered" readonly>
+            </div>
 
+
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">Degree</span>
+              </label>
+              <input type="text" placeholder="" x-model="details_degree" class="input input-bordered" readonly>
+            </div>
 
           </div>
         </div>
-      </div>
-    </div>
-    <!-- verify modal starts here -->
 
-    <div id="verify-modal" class="modal modal-open1">
-      <div class="modal-box">
-        <svg @click="toggleVerifyModal()" xmlns="http://www.w3.org/2000/svg"
-          class="h-6 w-6 opacity-70 self-end absolute right-4 top-4" fill="none" viewBox="0 0 24 24"
-          stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-        <div class="flex flex-col place-items-center">
-          <div class="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-green-50">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-green-700" fill="none" viewBox="0 0 24 24"
+        <div class="inline-flex gap-2 mt-10">
+
+          <a :href="verifyExplorerUrl" target="__blank" class="btn btn-sm bg-purple-900">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24"
               stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
             </svg>
-          </div>
-          <h1 class=" text-lg font-bold text-green-800 ">Certificate Explorer</h1>
-          <!-- <p class="text-sm px-8 mt-2 text-center">Copy your unique certificate id & keep it safe for future reference
+            Open Explorer
+          </a>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- verify modal starts here -->
+
+  <div id="verify-modal" class="modal modal-open1">
+    <div class="modal-box">
+      <svg @click="toggleVerifyModal()" xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6 opacity-70 self-end absolute right-4 top-4" fill="none" viewBox="0 0 24 24"
+        stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+      <div class="flex flex-col place-items-center">
+        <div class="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-green-50">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-green-700" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+          </svg>
+        </div>
+        <h1 class=" text-lg font-bold text-green-800 ">Certificate Explorer</h1>
+        <!-- <p class="text-sm px-8 mt-2 text-center">Copy your unique certificate id & keep it safe for future reference
             and verification.</p> -->
 
-          <form id="verify-form" class=" my-4 " action="" @submit.prevent="" @submit="verifyCert">
-            <div class="form-control flex flex-row items-center gap-2">
-              <!-- <label class="label">
+        <form id="verify-form" class=" my-4 " action="" @submit.prevent="" @submit="verifyCert">
+          <div class="form-control flex flex-row items-center gap-2">
+            <!-- <label class="label">
                 <span class="label-text">Certificate ID</span>
               </label>  -->
-              <input required id="verify_cert_id" type="text" placeholder="Paste 44 characters long ID"
-                x-modal="verify_cert_id" class="input input-bordered" maxlength="44" required>
-              <button type="submit" class="btn" :class="verify_status==STATUS.loading?'loading':''">Find</button>
+            <input required id="verify_cert_id" type="text" placeholder="Paste 44 characters long ID"
+              x-modal="verify_cert_id" class="input input-bordered" maxlength="44" required>
+            <button type="submit" class="btn" :class="verify_status==STATUS.loading?'loading':''">Find</button>
 
           </div>
         </form>
-
-          <!-- <div class="alert hidden">
-            <div class="flex-1">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mx-2 text-green-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-              <label>
-                Registered by <span class="font-bold" x-text="verify_stud_name">Akshay</span> & <span class="font-bold" x-text="verify_cert_auth">Amity</span> as Certifying authority
-              </label>
-            </div> 
-            <div class="flex-none">
-              <button class="btn btn-sm btn-ghost">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-4 mr-2 stroke-current">     
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>                     
-                </svg>
-                    Open In Explorer
-                  
-              </button>
-            </div>
-          </div> -->
-        </div>
       </div>
-
     </div>
-  </div>
 
+  </div>
 
   <!-- Login -->
 
-  <div id="login" class="w-screen h-screen bg-gray-900 absolute top-0 z-40 ">
+  <div id="login" class="w-screen h-screen max-h-screen bg-gray-900 absolute top-0 z-40 ">
 
-    <div class="flex flex-col place-items-center z-50 py-7">
+    <div class="flex flex-col place-items-center z-50 py-7 h-screen">
       <img src="assets/images/incryptix-logo.png" class="w-60 " alt="" srcset="">
       <h1 class="mt-14 font-bold text-2xl text-white ">Choose an option below</h1>
 
-      <div class="flex gap-5 my-8">
+      <div class="flex flex-col md:flex-row gap-5 my-8">
 
-          <div @click="openDash('IA')"
-            class="hover:scale-105 hover:bg-gray-50 cursor-pointer  flex flex-col place-items-center bg-white p-4 rounded-lg gap-5 w-56">
-            <div class="inline-flex items-center justify-center w-16 h-16 p-4 bg-purple-50 rounded-full">
+        <div @click="openDash('IA')"
+          class="hover:scale-105 hover:bg-gray-50 cursor-pointer  flex flex-col place-items-center justify-center items-center bg-white p-4 rounded-lg gap-5 w-56 py-8 ">
+          <div class="inline-flex items-center justify-center w-16 h-16 p-4 bg-purple-50 rounded-full">
 
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-purple-800" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" />
-              </svg>
-            </div>
-            <h2 class=" uppercase cursor-pointer">Issuing authority</h2>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-purple-800" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" />
+            </svg>
           </div>
-          <div @click="openDash('SD')"
-            class="hover:scale-105 hover:bg-gray-50 cursor-pointer  flex flex-col place-items-center bg-white p-4 rounded-lg gap-5 w-56">
-            <div class="inline-flex items-center justify-center w-16 h-16 p-4 bg-green-50 rounded-full">
+          <h2 class=" uppercase cursor-pointer">Issuing authority</h2>
+        </div>
+        <div @click="openDash('SD')"
+          class="hover:scale-105 hover:bg-gray-50 cursor-pointer  flex flex-col place-items-center justify-center items-center bg-white p-4 rounded-lg gap-5 w-56 py-4 ">
+          <div class="inline-flex items-center justify-center w-16 h-16 p-4 bg-green-50 rounded-full">
 
 
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-green-800" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
-              </svg>
-            </div>
-            <h2 class=" uppercase cursor-pointer">Student</h2>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-green-800" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+            </svg>
           </div>
-          <div @click="openDash('RT')"
-            class="hover:scale-105 hover:bg-gray-50 cursor-pointer  flex flex-col place-items-center bg-white p-4 rounded-lg gap-5 w-56">
-            <div class="inline-flex items-center justify-center w-16 h-16 p-4 bg-blue-50 rounded-full">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-blue-800" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
+          <h2 class=" uppercase cursor-pointer">Student</h2>
+        </div>
+        <div @click="openDash('RT')"
+          class="hover:scale-105 hover:bg-gray-50 cursor-pointer  flex flex-col place-items-center justify-center items-center bg-white p-4 rounded-lg gap-5 w-56 py-4 ">
+          <div class="inline-flex items-center justify-center w-16 h-16 p-4 bg-blue-50 rounded-full">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-blue-800" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
 
-            </div>
-            <h2 class=" uppercase cursor-pointer">Recruiter</h2>
           </div>
-
+          <h2 class=" uppercase cursor-pointer">Recruiter</h2>
         </div>
 
       </div>
@@ -555,15 +521,6 @@
 
   </div>
 
-
-
-  <!-- <footer></footer> -->
-  <!-- <div class="my-5 md:my-32 rounded-2xl p-4 footer text-base-content footer-center align-bottom">
-    <div>
-      <p class="text-xs text-gray-600">Copyright © 2021 - All right reserved by InCryptix</p>
-    </div>
-  </div> -->
-  </div>
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script> -->
   <!-- <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.rings.min.js"></script> -->
   <!-- <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script> -->
