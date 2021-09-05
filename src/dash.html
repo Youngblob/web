@@ -216,7 +216,7 @@
   </div>
   <!-- end main here -->
   <!-- create modal starts here -->
-  <div id="create-modal" class="modal modal-open1 ">
+  <div id="create-modal" class="modal ">
 
     <div class="modal-box">
 
@@ -316,20 +316,6 @@
         <h1 class=" text-lg font-bold text-green-800 ">Transaction Successful</h1>
         <p class="text-sm px-8 mt-2 text-center">Copy your unique certificate id & keep it safe for future reference
           and verification.</p>
-        <!-- <input type="text" readonly class="input" value="6dRC5VbW714ump9kZWfSba7RYYGXjxGNJSsYCmGJbidb"> -->
-        <div class="my-4 text-sm text-gray-700 p-4 border-2 rounded-box" x-text="program_id"></div>
-        <div class="inline-flex gap-2 mt-5">
-          <button class="btn btn-sm btn-outline" @click="copyId()">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-            </svg>
-        </div>
-        <h1 class=" text-lg font-bold text-green-800 ">Transaction Successful</h1>
-        <p class="text-sm px-8 mt-2 text-center">Copy your unique certificate id & keep it safe for future reference
-          and verification.</p>
-        <!-- <input type="text" readonly class="input" value="6dRC5VbW714ump9kZWfSba7RYYGXjxGNJSsYCmGJbidb"> -->
         <div class="my-4 text-sm text-gray-700 p-4 border-2 rounded-box" x-text="program_id"></div>
         <div class="inline-flex gap-2 mt-5">
           <button class="btn btn-sm btn-outline" @click="copyId()">
@@ -347,17 +333,14 @@
                 d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
             </svg>
             Open Explorer
-
           </a>
-
-
         </div>
       </div>
     </div>
   </div>
 
   <!-- Explore/verify Cert Details modal starts here -->
-  <div id="details-modal" class="modal modal">
+  <div id="details-modal" class="modal ">
 
     <div class="modal-box px-10">
       <svg @click="toggleDetailsModal()" xmlns="http://www.w3.org/2000/svg"
